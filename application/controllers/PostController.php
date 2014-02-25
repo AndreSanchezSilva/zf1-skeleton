@@ -13,7 +13,8 @@ class PostController extends Zend_Controller_Action
         
         // action body
         $modelPost = new Application_Model_Posts();
-        print_r($modelPost->getPost(1));
+        //print_r($modelPost->getPost(1));
+        $this->view->posts = $modelPost->getPosts();
     }
     
     public function mostrarAction(){
