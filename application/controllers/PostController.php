@@ -18,8 +18,9 @@ class PostController extends Zend_Controller_Action
     }
     
     public function mostrarAction(){
-       
-        
+        $modelPost = new Application_Model_Posts();
+        $this->view->posts = $modelPost->getPost($this->getParam('id'));
+        print_r($this->view->posts->toArray());        
        // recuperando todos os valores
        // var_dump($this->getAllParams());
     }

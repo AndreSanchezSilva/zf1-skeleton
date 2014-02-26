@@ -7,6 +7,6 @@ class Application_Model_Posts extends Application_Model_DbTable_Post
     }
 
     public function getPost($id) {
-    	return $this->find($id);
+    	return $this->find($id)->current();
     }
 }
